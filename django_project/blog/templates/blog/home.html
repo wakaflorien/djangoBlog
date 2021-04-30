@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block body %}
+{% for post in posts %}
+    <h1 class="text-secondary">{{ post.title}}</h1>
+    <img src="{% static 'blog/img/ur.jpg' %}" alt="My image">
+    <p class="text-secondary">{{ post.content }}</p>
+    <p class="text-secondary">By {{ post.author }}  on {{ post.date_posted }}</p>
+{% endfor %}
+{% endblock body%}
